@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser } from './api/apiservice';
-import logo from 'E:/DevOps/Csharp/WebAPP_1.5/FrontEnd/web-app/test-app/webapp-proj1/logo.png';
+import logo from './logo.png';
 
 export default function Registration() {
     const [username, setUsername] = useState('');
