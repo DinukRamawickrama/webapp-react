@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser } from './api/apiservice';
-import logo from './logo.png';
+import logo from './assets/logo.png';
 
 export default function Registration() {
     const [username, setUsername] = useState('');
@@ -19,10 +19,10 @@ export default function Registration() {
     };
 
     return (
-        <div style={{ width: '400px', justifyContent: 'center', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
-             <img src={logo} alt="Logo" style={{ width: '100px', marginBottom: '20px' }} />
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <img src={logo} alt="Logo" style={{ width: '100px', marginBottom: '20px' }} />
             <h2>Registration</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{ width: '300px', textAlign: 'center' }}>
                 <div>
                     <label>User Name:</label>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
@@ -33,13 +33,11 @@ export default function Registration() {
                 </div>
                 <div>
                     <label style={{ marginRight: '45px' }}>Email:</label>
-    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
-              <hr/> <center> <button type="submit">Register</button></center>
+                <hr />
+                <center><button type="submit">Register</button></center>
             </form>
-      
         </div>
     );
 }
-
- 
